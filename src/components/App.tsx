@@ -1,6 +1,4 @@
-import React from 'react';
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Todo, fetchTodos, deleteTodo } from '../actions';
 import { StoreState } from '../reducers';
@@ -35,7 +33,6 @@ const __App = ({ todos, fetchTodos, deleteTodo }: AppProps): JSX.Element => {
   };
 
   useEffect(() => {
-    console.log('prevTodos:', prevTodos);
     setFetching(false);
   }, [todos]);
 
